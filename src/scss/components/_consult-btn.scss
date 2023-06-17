@@ -1,0 +1,22 @@
+.consult-btn {
+  width: fit-content;
+  border: none;
+  background: #4fbb5b;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: var(--light-color);
+  padding: 20px;
+  border-radius: var(--rounded);
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  &:hover {
+    background: #419149;
+  }
+  @include tablet {
+    margin: 0 auto;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}

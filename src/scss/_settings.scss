@@ -10,7 +10,7 @@ html {
 
 .page {
   height: 100%;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -28,6 +28,7 @@ img {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -82,6 +83,9 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+  @include small-tablet  {
+    max-width: 620px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -104,4 +108,8 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
