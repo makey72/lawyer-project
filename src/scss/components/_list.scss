@@ -18,6 +18,9 @@
     width: 25px;
     height: 25px;
   }
+  @include small-tablet {
+    margin-bottom: 15px;
+  }
 }
 
 .list-item__text {
@@ -40,4 +43,7 @@
 }
 .list-item__text--services {
   color: #383838;
+  @include small-tablet {
+    font-size: .95rem;
+  }
 }

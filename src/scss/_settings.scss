@@ -87,7 +87,9 @@ a {
     max-width: 620px;
   }
   &--mobile {
-    padding: 0;
+    @include mobile {
+      padding: 0;
+    }
   }
 }
 
@@ -116,7 +118,9 @@ a {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
-
+address {
+  font-style: inherit;
+}
 .title {
   color: var(--mine-shaft);
   font-weight: 700;

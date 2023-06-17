@@ -1,0 +1,126 @@
+.consultation-middle {
+  background: #18A96D;
+  padding: 50px 0;
+}
+
+.consultation-middle-box {
+  background: var(--light-color);
+  padding: 45px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include small-tablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  @include mobile {
+    padding: 40px 20px;
+  }
+}
+
+.consultation-middle-box__left, .consultation-middle-box__right {
+  width: 50%;
+  @include small-tablet {
+    width: 100%;
+  }
+}
+
+.consultation-middle-box-wrapper {
+  max-width: 420px;
+  width: 100%;
+  @include small-tablet {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.consultation-middle-box__left-title {
+  font-weight: 700;
+  font-size: 2.9rem;
+  color: #2d3233;
+
+  &-dec {
+    color: #00ae4b;
+  }
+
+  @include small-tablet {
+    font-size: 2rem;
+    text-align: center;
+  }
+  @include mobile {
+    font-size: 1.7rem;
+  }
+}
+
+.consultation-middle-box__left-title::after {
+  content: '';
+  display: block;
+  background: #dead71;
+  width: 100px;
+  height: 4px;
+  margin: 30px 0;
+  @include small-tablet {
+    margin: 25px auto;
+  }
+}
+
+.consultation-middle__address {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  @include small-tablet {
+    display: none;
+  }
+}
+
+.consultation-middle__address-title, .consultation-middle__address-mail {
+  color: #2d3233;
+  font-size: 1.05rem;
+  font-weight: 400;
+  @include small-tablet {
+    text-align: center;
+  }
+}
+
+.consultation-middle__address-number {
+  color: #2d3233;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.consultation-middle-box__right-title {
+  color: var(--green-haze);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  @include small-tablet {
+    display: none;
+  }
+}
+
+.consultation-middle-box__right-subtitle {
+  color: #4d4d4d;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  @include small-tablet {
+    text-align: center;
+  }
+  @include mobile {
+    font-size: .9rem;
+  }
+}
+
+.consultation-middle__address--tabled {
+  display: none;
+  @include small-tablet {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+}
+
+

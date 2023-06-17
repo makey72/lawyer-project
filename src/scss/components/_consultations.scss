@@ -1,5 +1,8 @@
 .consultation {
   margin-bottom: 100px;
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
 }
 
 .consultation-box {
