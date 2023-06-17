@@ -6,8 +6,10 @@
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
   --rounded: 5px;
+
+
+  --swiper-theme-color: var(--green-haze);
 
   // colors
   --light-color: #fff;
