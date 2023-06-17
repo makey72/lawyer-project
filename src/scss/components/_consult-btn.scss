@@ -13,10 +13,16 @@
   &:hover {
     background: #419149;
   }
-  @include tablet {
+  @include small-tablet {
     margin: 0 auto;
   }
   @include mobile {
+    width: 100%;
+  }
+}
+.consult-btn--form {
+  padding: 28px;
+  @include small-tablet {
     width: 100%;
   }
 }

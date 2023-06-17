@@ -1,0 +1,148 @@
+.consultation {
+  margin-bottom: 100px;
+}
+
+.consultation-box {
+  display: flex;
+  align-items: stretch;
+  min-height: 400px;
+  @include small-tablet {
+    flex-direction: column;
+  }
+}
+
+.consultation-box__left, .consultation-box__right {
+  justify-content: center;
+}
+
+.consultation-box__left {
+  min-width: 380px;
+  background: #f0f0f0;
+  border-radius: var(--rounded) 0 0 var(--rounded);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  @include small-tablet {
+    padding: 20px 10px 35px 10px;
+  }
+  @include mobile {
+    padding: 20px 10px;
+    min-width: auto;
+  }
+}
+
+.consultation-box__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  @include small-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  @include mobile {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+
+.consultation-box__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--light-color);
+  padding: 15px 25px;
+  border-radius: 50px;
+  @include small-tablet {
+    width: 47%;
+  }
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &-title {
+    font-size: 1rem;
+    font-weight: 700;
+    @include mobile {
+      font-size: 0.9rem;
+    }
+  }
+
+  &-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--green-haze);
+    @include mobile {
+      font-size: 1rem;
+    }
+
+    &-dec {
+      color: #ff756e;
+      font-weight: 400;
+      text-decoration: line-through;
+    }
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.consultation-box__right {
+  position: relative;
+  background: rgba(246, 246, 246, 0.5);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-radius: 0 var(--rounded) var(--rounded) 0;
+  padding: 45px 45px 45px 90px;
+  overflow: hidden;
+  @include tablet {
+    padding: 25px;
+  }
+}
+
+.consultation-box__right::after {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  content: '';
+  display: block;
+  background: url("../img/bg-form.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 260px;
+  height: 80%;
+  opacity: .1;
+}
+
+.consultation-box__form {
+  max-width: 500px;
+  width: 100%;
+  z-index: 5;
+}
+
+.consultation-box__title {
+  font-weight: 700;
+  color: #000000;
+  font-size: 1.9rem;
+  line-height: 1.20;
+  margin-bottom: 25px;
+  @include small-tablet {
+    text-align: center;
+  }
+  @include mobile {
+    font-size: 1.3rem;
+  }
+}

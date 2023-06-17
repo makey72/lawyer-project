@@ -4,6 +4,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 90px;
 }
 .header__inner {
   @include flex;
@@ -149,36 +150,6 @@ header {
     @include small-tablet {
       text-align: center;
       font-size: 1.2rem;
-    }
-  }
-  &__list {
-    margin-bottom: 35px;
-    @include small-tablet {
-      margin: 0 auto 35px auto;
-    }
-  }
-  &__item {
-    color: var(--light-color);
-    font-weight: 400;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    @include small-tablet {
-      font-size: 1.2rem;
-    }
-    @include mobile {
-      font-size: .95rem;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &::before {
-      content: url("../img/svg/checkbox.svg");
-      display: block;
-      width: 25px;
-      height: 25px;
     }
   }
   &__text {
