@@ -68,8 +68,8 @@ const swiper = new Swiper('.swiper', {
 // AOS.init();
 
 // Подключение параллакса блоков при скролле
-// import Rellax from 'rellax';
-// const rellax = new Rellax('.rellax');
+//import Rellax from 'rellax';
+//const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
 // import SmoothScroll from 'smooth-scroll';
@@ -91,3 +91,38 @@ const swiper = new Swiper('.swiper', {
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
+import {validateForms} from "./functions/validate-forms";
+
+const setting = [
+  {
+    ruleSelector: '#inp-name', rules: [
+      {
+        rule: 'required',
+      },
+      {
+        rule: 'minLength',
+        value: 3,
+      },
+    ]
+  },
+  {
+    ruleSelector: '#inp-number',
+    tel: true,
+    telError: 'err phone',
+    rules: [
+      {
+        rule: 'required',
+      },
+      {
+        rule: 'minLength',
+        value: 10,
+      },
+    ],
+  }
+]
+
+const send = () => {
+
+}
+validateForms('.form', setting, send())

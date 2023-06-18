@@ -1,1 +1,1 @@
-import './components/ex';
+import './components/collapse';

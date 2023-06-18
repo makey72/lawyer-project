@@ -5,6 +5,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 90px;
+  overflow: hidden;
 }
 .header__inner {
   @include flex;

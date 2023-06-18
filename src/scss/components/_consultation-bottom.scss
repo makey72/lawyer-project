@@ -1,0 +1,146 @@
+.consultation-bottom {
+  background: linear-gradient(to bottom, rgba(12, 11, 23, 0.85), rgba(12, 11, 23, 0.85)), url("../img/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.consultation-bottom__inner {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  @include small-tablet {
+    flex-direction: column;
+    gap: 35px;
+  }
+}
+.consultation-bottom-left {
+  max-width: 560px;
+  width: 100%;
+  margin-top: 50px;
+  flex: 1;
+  @include small-tablet {
+    margin-top: 0;
+  }
+}
+.consultation-bottom-left__subtitle {
+  display: block;
+  font-size: 1.1rem;
+  color: #fcdeba;
+  margin-bottom: 15px;
+  @include small-tablet {
+    text-align: center;
+  }
+}
+
+.consultation-bottom-left__title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--light-color);
+  margin-bottom: 40px;
+  line-height: 46px;
+  @include tablet {
+    font-size: 1.6rem;
+    line-height: 40px;
+  }
+  @include small-tablet {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  @include mobile {
+    font-size: 1.7rem;
+  }
+}
+.consultation-bottom-left__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @include small-tablet {
+    gap: 30px;
+  }
+}
+.consultation-bottom-left__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  @include small-tablet {
+    gap: 10px;
+  }
+
+  &-text {
+    flex: 1;
+    font-size: 1.03rem;
+    font-weight: 700;
+    color: #ebebeb;
+    line-height: 25px;
+    @include small-tablet {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    &-dec {
+      color: #fcdeba;
+    }
+  }
+}
+.consultation-bottom-left__item::before {
+  content: '';
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: url("../img/svg/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 23px;
+  background-color: #0f0f0f;
+  border-radius: 50%;
+}
+.consultation-bottom-form {
+  max-width: 460px;
+  width: 100%;
+  padding: 30px;
+  background: #171717;
+  border-radius: var(--rounded);
+  @include small-tablet {
+    max-width: 100%;
+  }
+  @include mobile {
+    padding: 25px 15px;
+  }
+}
+.consultation-bottom-form__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--light-color);
+  margin-bottom: 10px;
+  @include small-tablet {
+    text-align: center;
+  }
+}
+.consultation-bottom-form__subtitle {
+  flex: 1;
+  display: block;
+  font-size: .95rem;
+  font-weight: 300;
+  color: var(--light-color);
+}
+.consultation-bottom-form__desc-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.consultation-bottom-form__desc-box::before {
+  content: '';
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: url("../img/svg/stopwatch.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  background-color: #0f0f0f;
+  border-radius: 50%;
+}
