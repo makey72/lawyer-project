@@ -62,12 +62,14 @@ const swiper = new Swiper('.swiper', {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
 
 // Подключение анимаций по скроллу
  import AOS from 'aos';
  AOS.init();
+
 
 // Подключение параллакса блоков при скролле
 //import Rellax from 'rellax';
@@ -182,6 +184,15 @@ const rules3 = [
       }
     ]
   },
+  {
+    ruleSelector: '.form-textarea3',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 0,
+      }
+    ]
+  },
 ];
 const rules4 = [
   {
@@ -240,6 +251,15 @@ const rules5 = [
       }
     ]
   },
+  {
+    ruleSelector: '.form-textarea5',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 0,
+      }
+    ]
+  },
 ];
 const rules6 = [
   {
@@ -271,8 +291,16 @@ const rules6 = [
   },
 ];
 
+const Swal = require('sweetalert2');
 const afterForm = () => {
-  console.log('Произошла отправка');
+  document.querySelector('.js-modal-close').click();
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Форма успешно отправлена!',
+    showConfirmButton: false,
+    timer: 1500
+  })
 };
 
 validateForms('.form1', rules1, afterForm);
@@ -281,3 +309,8 @@ validateForms('.form3', rules3, afterForm);
 validateForms('.form4', rules4, afterForm);
 validateForms('.form5', rules5, afterForm);
 validateForms('.form6', rules6, afterForm);
+
+
+// CommonJS
+
+

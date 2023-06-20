@@ -51,7 +51,6 @@ export const validateForms = (selector, rules, afterSend) => {
           if (afterSend) {
             afterSend();
           }
-          console.log('Отправлено');
         }
       }
     }

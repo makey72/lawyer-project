@@ -11,3 +11,11 @@
 
 // стили для свайпера
 @import "../../node_modules/swiper/swiper-bundle.min";
+.swiper-button-disabled {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
