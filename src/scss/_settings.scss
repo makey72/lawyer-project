@@ -19,6 +19,8 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  opacity: 0;
+  transition: .5s ease;
 }
 
 img {
@@ -146,4 +148,8 @@ address {
   @include mobile {
     font-size: 0.9rem;
   }
+}
+
+.just-validate-error-label {
+  margin: 2px 0 0 3px;
 }

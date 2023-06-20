@@ -49,6 +49,21 @@
 }
 .form--bottom .form-group .form-input {
   border-radius: 4px;
-  height: 60px;
-  padding: 0 25px;
+  padding: 20px;
+}
+.form-input--modal {
+  border-radius: var(--rounded);
+  padding: 20px;
+}
+.form-policy-text--modal {
+  text-align: center;
+  color: #000000;
+  font-weight: 300;
+  line-height: 21.7px;
+}
+.form-textarea--modal {
+  border: 1px solid rgb(173, 182, 184);
+  border-radius: var(--rounded);
+  resize: vertical;
+
 }

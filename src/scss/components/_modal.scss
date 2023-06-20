@@ -1,0 +1,28 @@
+.graph-modal__container {
+  max-width: 560px;
+  padding: 40px 40px;
+  @include mobile {
+    padding: 40px 15px;
+  }
+}
+.modal__title {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 15px;
+  text-align: center;
+  @include mobile {
+    font-size: 1.8rem;
+  }
+}
+.modal__subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
+  line-height: 24.8px;
+  text-align: center;
+  margin-bottom: 20px;
+  @include mobile {
+    font-size: .9rem;
+  }
+}

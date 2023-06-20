@@ -2,8 +2,8 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+//import {mobileCheck} from "./functions/mobile-check";
+
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -30,8 +30,9 @@ console.log(mobileCheck())
 // import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+import GraphModal from 'graph-modal';
+
+const modal = new GraphModal();
 
 // Реализация табов
 //import GraphTabs from 'graph-tabs';
@@ -50,10 +51,11 @@ console.log(mobileCheck())
 // });
 
 // Подключение свайпера
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, {Navigation, Pagination} from 'swiper';
+
 Swiper.use([Navigation, Pagination]);
 const swiper = new Swiper('.swiper', {
- slidesPerView: 'auto',
+  slidesPerView: 'auto',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -64,8 +66,8 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Подключение анимаций по скроллу
-// import AOS from 'aos';
-// AOS.init();
+ import AOS from 'aos';
+ AOS.init();
 
 // Подключение параллакса блоков при скролле
 //import Rellax from 'rellax';
@@ -94,35 +96,188 @@ const swiper = new Swiper('.swiper', {
 
 import {validateForms} from "./functions/validate-forms";
 
-const setting = [
+const rules1 = [
   {
-    ruleSelector: '#inp-name', rules: [
-      {
-        rule: 'required',
-      },
+    ruleSelector: '.input-name1',
+    rules: [
       {
         rule: 'minLength',
         value: 3,
+        errorMessage: 'Заполните имя!'
       },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
     ]
   },
   {
-    ruleSelector: '#inp-number',
+    ruleSelector: '.input-tel1',
     tel: true,
-    telError: 'err phone',
+    telError: 'Введите корректный телефон',
     rules: [
       {
         rule: 'required',
-      },
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
+const rules2 = [
+  {
+    ruleSelector: '.input-name2',
+    rules: [
       {
         rule: 'minLength',
-        value: 10,
+        value: 3,
+        errorMessage: 'Заполните имя!'
       },
-    ],
-  }
-]
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel2',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
+const rules3 = [
+  {
+    ruleSelector: '.input-name3',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Заполните имя!'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel3',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
+const rules4 = [
+  {
+    ruleSelector: '.input-name4',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Заполните имя!'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel4',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
+const rules5 = [
+  {
+    ruleSelector: '.input-name5',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Заполните имя!'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel5',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
+const rules6 = [
+  {
+    ruleSelector: '.input-name6',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Заполните имя!'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel6',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
 
-const send = () => {
+const afterForm = () => {
+  console.log('Произошла отправка');
+};
 
-}
-validateForms('.form', setting, send())
+validateForms('.form1', rules1, afterForm);
+validateForms('.form2', rules2, afterForm);
+validateForms('.form3', rules3, afterForm);
+validateForms('.form4', rules4, afterForm);
+validateForms('.form5', rules5, afterForm);
+validateForms('.form6', rules6, afterForm);

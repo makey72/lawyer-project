@@ -4,7 +4,7 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-#[[\$]]#title = "Тема письма";
+#[[\$]]#title = "Письмо с сайта";
 #[[\$]]#file = #[[\$]]#_FILES['file'];
 
 #[[\$]]#c = true;
