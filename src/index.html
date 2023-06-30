@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" class="page">
 
 @include('partials/head.html')
@@ -24,14 +24,16 @@
   @include('partials/modal.html')
 
 <script>
-  const page = document.querySelector('.page__body');
+  const page = document.querySelector('.site-container');
   const ready = () => {
     setTimeout(()=>{
-      document.body.style.opacity = '1';
+      page.style.opacity = '1';
     }, 200)
   }
   document.addEventListener('DOMContentLoaded', ready);
+
 </script>
+
 </body>
 
 </html>

@@ -19,8 +19,6 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
-  opacity: 0;
-  transition: .5s ease;
 }
 
 img {
@@ -36,6 +34,8 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  opacity: 0;
+  transition: .5s ease;
 }
 
 .is-hidden {

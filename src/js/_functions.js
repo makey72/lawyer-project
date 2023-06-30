@@ -24,10 +24,10 @@
 // import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './functions/disable-scroll';
+//import { disableScroll } from './functions/disable-scroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './functions/enable-scroll';
+//import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
 import GraphModal from 'graph-modal';
@@ -95,6 +95,7 @@ const swiper = new Swiper('.swiper', {
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
 
 import {validateForms} from "./functions/validate-forms";
 
@@ -291,7 +292,7 @@ const rules6 = [
   },
 ];
 
-const Swal = require('sweetalert2');
+import Swal from './functions/sweetalert2.js';
 const afterForm = () => {
   document.querySelector('.js-modal-close').click();
   Swal.fire({
@@ -309,6 +310,7 @@ validateForms('.form3', rules3, afterForm);
 validateForms('.form4', rules4, afterForm);
 validateForms('.form5', rules5, afterForm);
 validateForms('.form6', rules6, afterForm);
+
 
 
 // CommonJS
