@@ -1,5 +1,8 @@
 .footer {
   background: #151226;
+  @include mobile {
+    padding-bottom: 51px;
+  }
 }
 .footer-top {
   padding: 55px 0 30px;
