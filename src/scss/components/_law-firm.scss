@@ -1,0 +1,43 @@
+.law-firm {
+  margin-bottom: 120px;
+}
+.law-firm-content-box {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  @include tablet {
+    flex-direction: column-reverse;
+  }
+}
+.law-firm-content-box__left {
+  max-width: 460px;
+  @include tablet {
+    max-width: 100%;
+  }
+}
+.law-firm-content-box__title {
+  color: #1f2326;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 20px;
+  @include tablet {
+    text-align: center;
+  }
+}
+.law-firm-content-box__desc {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 23px;
+  margin-bottom: 20px;
+  @include tablet {
+    text-align: center;
+  }
+}
+.law-firm-content-box__desc:last-child {
+  margin-bottom: 0;
+}
+.law-firm-content-box__img {
+  border-radius: 20px;
+}

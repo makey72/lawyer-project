@@ -14,17 +14,18 @@ header {
 }
 
 .header-top {
-  @include flex-all-sb;
   border-bottom: 1px solid rgba(66, 64, 64, 0.7);
   padding: 20px 0;
+
+}
+.header-top__items {
+  @include flex-all-sb;
   gap: 40px;
   @include small-tablet {
     flex-direction: column;
     gap: 20px;
   }
-
 }
-
 .header__right-bar {
   @include flex-all-sb;
   gap: 40px;
@@ -121,7 +122,7 @@ header {
 }
 
 .header-bottom {
-  padding: 50px 0;
+  padding-bottom: 50px;
   display: flex;
   justify-content: space-between;
   @include small-tablet {
@@ -164,6 +165,7 @@ header {
       text-align: center;
       font-size: 1.2rem;
     }
+
   }
 
   &__text {

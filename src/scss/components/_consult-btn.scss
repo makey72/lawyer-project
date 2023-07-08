@@ -9,7 +9,7 @@
   padding: 20px;
   border-radius: var(--rounded);
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: all .3s ease-in-out;
   &:hover {
     background: #419149;
   }
@@ -19,12 +19,24 @@
   @include mobile {
     width: 100%;
   }
+  &--main {
+    background: transparent;
+    outline: 1px solid #ffffff;
+    width: 270px;
+    &:hover {
+      outline: 1px solid #4fbb5b;
+      background: #4fbb5b;
+    }
+  }
 }
 .consult-btn--form {
   padding: 28px;
   @include small-tablet {
     width: 100%;
   }
+}
+.consult-btn--form-main {
+  background: #00ae4b;
 }
 .consult-btn--centered {
   margin: 0 auto;

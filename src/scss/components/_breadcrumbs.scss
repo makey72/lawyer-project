@@ -1,0 +1,45 @@
+.breadcrumbs {
+  margin-top: 20px;
+  @include small-tablet {
+    margin-top: 35px;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    color: #cfcfcf;
+  }
+
+  &-item:last-child {
+    color: #ffffff;
+  }
+
+  &-item::after {
+    content: '/';
+    margin: 0px 10px;
+    color: #cfcfcf;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  &-item:last-child::after {
+    content: none;
+  }
+
+  &-link {
+    display: block;
+    color: inherit;
+    font-size: 15px;
+    font-weight: 300;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}

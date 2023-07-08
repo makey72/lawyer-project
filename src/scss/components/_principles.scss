@@ -1,0 +1,169 @@
+.principles {
+  margin-bottom: 120px;
+}
+.principles-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 55px;
+  margin-bottom: 50px;
+  @include mobile {
+    justify-content: center;
+  }
+}
+.principles-item {
+  width: 48%;
+  display: flex;
+  gap: 35px;
+  @include small-tablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  @include mobile {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+.principles-item__box-img {
+  width: 60px;
+  height: 60px;
+}
+.principles-item__box-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.principles-item__title {
+  color: #212121;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 29px;
+  @include small-tablet {
+    text-align: center;
+  }
+}
+.principles-item__desc {
+  color: #414141;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 26px;
+  @include small-tablet {
+    text-align: center;
+  }
+}
+.principles-chedk {
+  width: 100%;
+  padding: 45px;
+  background: #f2f2f2;
+  border-radius: 25px;
+  @include mobile {
+    padding: 25px 10px;
+  }
+}
+
+.principles-chedk-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.principles-chedk-text::before {
+  content: '';
+  display: none;
+  width: 40px;
+  height: 31px;
+  background-image: url("../img/quote-open.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mobile {
+    display: block;
+  }
+}
+.principles-chedk-text::after {
+  content: '';
+  display: none;
+  width: 40px;
+  height: 31px;
+  background-image: url("../img/quote-close.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mobile {
+    display: block;
+  }
+}
+.principles-chedk-text__title-box {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.principles-chedk-text__title {
+  max-width: 640px;
+  flex: 1;
+  text-align: center;
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: .5px;
+  font-style: italic;
+  line-height: 38px;
+  &-dec {
+    font-weight: 700;
+    font-style: normal;
+  }
+  @include small-tablet {
+    font-size: 1.4rem;
+  }
+  @include mobile {
+    font-size: 1.3rem;
+  }
+}
+.principles-chedk-text__title-box::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 63px;
+  background-image: url("../img/quote-open.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include small-tablet {
+    width: 40px;
+    height: 31px;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.principles-chedk-text__title-box::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 63px;
+  background-image: url("../img/quote-close.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include small-tablet {
+    width: 40px;
+    height: 31px;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.principles-chedk-text__desc {
+  text-align: center;
+  color: #000000;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 26px;
+  @include mobile {
+    font-size: .85rem;
+  }
+}

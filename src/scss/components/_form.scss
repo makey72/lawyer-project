@@ -61,6 +61,18 @@
   font-weight: 300;
   line-height: 21.7px;
 }
+.form-policy-text-mob {
+  display: none;
+  @include tablet {
+    display: block;
+    text-align: center;
+  }
+}
+.form-policy-text-pc {
+  @include tablet {
+    display: none;
+  }
+}
 .form-textarea--modal {
   border: 1px solid rgb(173, 182, 184);
   border-radius: var(--rounded);

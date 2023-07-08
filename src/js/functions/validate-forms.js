@@ -6,7 +6,6 @@ export const validateForms = (selector, rules, afterSend) => {
   const telSelector = form?.querySelector('input[type="tel"]');
 
   if (!form) {
-    console.error('Нет такого селектора!');
     return false;
   }
 
