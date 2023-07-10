@@ -54,21 +54,43 @@ const modal = new GraphModal();
 import Swiper, {Navigation, Pagination} from 'swiper';
 
 Swiper.use([Navigation, Pagination]);
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews-swiper', {
   slidesPerView: 'auto',
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.reviews-swiper-button-next',
+    prevEl: '.reviews-swiper-button-prev',
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.reviews-swiper-pagination',
     clickable: true,
   },
 });
-
+const teamSwiper = new Swiper('.team-swiper', {
+  slidesPerView: '1',
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.team-swiper-button-next',
+    prevEl: '.team-swiper-button-prev',
+  },
+  pagination: {
+    el: '.team-swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    576: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 3,
+    }
+  },
+  });
 // Подключение анимаций по скроллу
- import AOS from 'aos';
- AOS.init();
+import AOS from 'aos';
+
+AOS.init();
 
 
 // Подключение параллакса блоков при скролле
@@ -291,8 +313,46 @@ const rules6 = [
     ]
   },
 ];
-
+const rules7 = [
+  {
+    ruleSelector: '.input-name7',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Заполните имя!'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel7',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.form-textarea7',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 0,
+      }
+    ]
+  },
+];
 import Swal from './functions/sweetalert2.js';
+
 const afterForm = () => {
   document.querySelector('.js-modal-close').click();
   Swal.fire({
@@ -310,7 +370,7 @@ validateForms('.form3', rules3, afterForm);
 validateForms('.form4', rules4, afterForm);
 validateForms('.form5', rules5, afterForm);
 validateForms('.form6', rules6, afterForm);
-
+validateForms('.form7', rules7, afterForm);
 
 
 // CommonJS

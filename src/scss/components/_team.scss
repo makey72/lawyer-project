@@ -1,0 +1,72 @@
+.team {
+  margin-bottom: 100px;
+}
+.team-card {
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+.team-card__img {
+  max-height: 390px;
+  height: 100%;
+
+}
+.team-card-text-box {
+  padding: 50px;
+  @include small-tablet {
+    padding: 25px;
+  }
+}
+.team-card__job-title {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #ff8562;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  @include mobile {
+    font-size: .7rem;
+  }
+}
+.team-card__name {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+.team-card__desc-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.team-card__desc {
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.55;
+  @include mobile {
+    font-size: .8rem;
+  }
+}
+.team-slider {
+  position: relative;
+}
+.team-swiper-pagination {
+  display: none;
+  bottom: -30px !important;
+  @include small-tablet {
+    display: block;
+  }
+}
+.swiper-button-next, .swiper-button-prev {
+  top: 55%;
+}
+.swiper-button-prev {
+  left: 3px;
+}
+.swiper-button-next {
+  right: 3px;
+}
