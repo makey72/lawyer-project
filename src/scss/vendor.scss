@@ -4,7 +4,32 @@
 @import "../../node_modules/graph-modal/dist/graph-modal.min";
 
 // стили для табов
-//@import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+@import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+.tabs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.tabs__nav-btn {
+  padding: 6px 18px;
+  color: #212121;
+  font-size: 1.05rem;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+.tabs__nav-btn--active {
+  background: #fcc17d;
+  border: 1px solid #fcc17d;
+}
+.tabs__nav-btn:focus {
+  color: #212121;
+  background: #fcc17d;
+  border: 1px solid #fcc17d;
+}
 
 // стили для библиотеки aos
 @import "../../node_modules/aos/dist/aos";

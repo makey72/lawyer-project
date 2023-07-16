@@ -131,6 +131,9 @@ address {
   &-dec {
     color: var(--green-haze);
   }
+  &-light {
+    font-weight: 300;
+  }
   @include mobile {
     font-size: 1.8rem;
   }
@@ -141,6 +144,7 @@ address {
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 45px;
+  line-height: 22px;
   &-dec {
     font-weight: 700;
   }

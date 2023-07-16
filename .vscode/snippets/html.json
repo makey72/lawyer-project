@@ -1,13 +1,4 @@
 {
-  "svguse": {
-    "scope": "html",
-    "prefix": "g-use",
-    "body": [
-      "<svg class=\"\">",
-      "  <use xlink:href=\"img/sprite.svg\      "</svg>"
-    ],
-    "description": "Snippet for use svg sprites"
-  },
   "burger": {
     "scope": "html",
     "prefix": "g-burger",

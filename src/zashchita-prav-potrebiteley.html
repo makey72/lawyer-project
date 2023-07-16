@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+<div class="site-container">
+  @include('partials/header.html')
+  <main class="main">
+    @include('partials/consultation.html')
+    @include('partials/services.html')
+    @include('partials/pretrial-banner.html')
+    @include('partials/consultation-middle.html')
+    @include('partials/advantages.html')
+    @include('partials/scheme.html')
+    @include('partials/specified-situation.html')
+    @include('partials/consultation-banner.html')
+    @include('partials/cases.html')
+    @include('partials/reviews.html')
+    @include('partials/responsibility.html')
+    @include('partials/law-firm.html')
+    @include('partials/chedk.html')
+    @include('partials/team.html')
+    @include('partials/faq.html')
+    @include('partials/consultation-bottom.html')
+    @include('partials/contacts.html')
+  </main>
+  @include('partials/footer.html')
+  <!-- @include('html/h1.html') пример include -->
+</div>
+@include('partials/modal.html')
+
+<script>
+  const page = document.querySelector('.site-container');
+  const ready = () => {
+    setTimeout(()=>{
+      page.style.opacity = '1';
+    }, 200)
+  }
+  document.addEventListener('DOMContentLoaded', ready);
+
+</script>
+
+</body>
+
+</html>
